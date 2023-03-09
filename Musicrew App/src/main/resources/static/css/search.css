@@ -8,3 +8,18 @@
 	width: 700px; height: 50px;
 	border-radius: 30px;
 }
+#select-box-area {
+	text-align: center;
+	background-color: #d5a6bdff;
+	width: 700px; height: 60px;
+	margin: 10px auto;
+	border-radius: 20px;
+}
+select {
+	position: relative;
+	top: 13px;
+	width: 120px; height: 30px;
+	color: #a64d79;
+	background-color: #ead1dcff;
+	border-radius: 10px;
+}

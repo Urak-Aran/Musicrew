@@ -11,7 +11,7 @@
 <body>
 	<header>
 		<img th:src="@{images/MusicrewLogo.png}" id="header-logo">
-		
+
 		<nav id="header-buttons">
 			<ul id="index">
 				<li><a th:href="@{/top}" method="post">top</a></li>
@@ -26,6 +26,62 @@
 	<main>
 		<form>
 			<input id="search-bar" type="text-box" placeholder="search...">
+
+			<div id="select-box-area">
+				<select>
+					<option>好きな年代</option>
+					<option>1950年代</option>
+					<option>1960年代</option>
+					<option>1970年代</option>
+					<option>1980年代</option>
+					<option>1990年代</option>
+					<option>2000年代</option>
+					<option>2010年代</option>
+					<option>2020年代</option>
+				</select>
+
+				<select>
+					<option>活動地域</option>
+					<option>北海道</option>
+					<option>東北</option>
+					<option>関東</option>
+					<option>中部</option>
+					<option>近畿</option>
+					<option>中国</option>
+					<option>四国</option>
+					<option>九州</option>
+				</select>
+
+				<select>
+					<option>担当楽器</option>
+					<option>ギター</option>
+					<option>ベース</option>
+					<option>キーボード</option>
+					<option>ボーカル</option>
+					<option>ドラム</option>
+					<option>サックス</option>
+				</select>
+
+				<select>
+					<option>ジャンル</option>
+					<option>ロック</option>
+					<option>ハードロック</option>
+					<option>ジャズ</option>
+					<option>フュージョン</option>
+					<option>ラテン</option>
+					<option>クラシック</option>
+					<option>ファンク</option>
+					<option>AOR</option>
+					<option>City Pop</option>
+				</select>
+
+				<select>
+					<option>志向</option>
+					<option>プロ志向</option>
+					<option>趣味志向</option>
+				</select>
+
+			</div>
 		</form>
 	</main>
 
