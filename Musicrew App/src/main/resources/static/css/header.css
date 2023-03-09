@@ -1,0 +1,41 @@
+@charset "UTF-8";
+header {
+	background-color: #171319;
+	margin-top: 0;
+	margin-bottom: 0;
+	display: flex;
+	height: 80px;
+}
+body {
+	background-color: #37303a;
+}
+#header-logo {
+	width: 360px; height: 80px;
+	display: flex;
+	right: 30px;
+}
+#header-buttons {
+	color: #d5a6bd;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Roboto Mono', monospace;
+	position: absolute;
+	right: 0;
+	top: 18px;
+	height: 100px;
+}
+#index {
+	list-style: none;
+	display: flex;
+	padding-top: auto;
+	padding-bottom: auto;
+}
+#index > li {
+	margin-right: 50px;
+}
+a {
+	text-decoration: none;
+	color: #d5a6bd;
+}
+
+

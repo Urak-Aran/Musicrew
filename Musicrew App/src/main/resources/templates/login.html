@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Musicrew Login</title>
+	<link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+	<div class="login-page">
+		<img th:src="@{images/loginpage.jpg}">
+
+		<div id="login-page-rightside">
+			<img th:src="@{images/MusicrewLogo.png}">
+			<div>
+				<form th:action="@{/top}" id="form">
+					<label class="label-username">username</label>
+					<input type="text" class="text-box">
+
+					<label class="label-password">password</label>
+					<input type="text" class="text-box"><br>
+
+
+					<label class="forget-password">パスワードを忘れた方はこちら</label><br>
+
+					<input type="submit" value="login" id="login-button">
+					<br>
+				</form>
+				
+				<form th:action="@{/memberRegistration}" id="form">
+					<input type="submit" value="sign up" id="signup-button">
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

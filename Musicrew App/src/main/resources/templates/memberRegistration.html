@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Registraion</title>
+	<link rel="stylesheet" th:href="@{/css/memberRegistration.css}">
+</head>
+
+<body>
+	<div id="registration-header">
+		<h3>registration</h3>
+	</div>
+
+	<div id="form">
+		<div id="labels">
+			<h3>name<span class="font-required">required</span></h3>
+			<h3>kana<span class="font-required">required</span></h3>
+			<h3>email<span class="font-required">required</span></h3>
+			<h3>password<span class="font-required">required</span></h3>
+			<h3>gender</h3>
+			<h3>date of birth</h3>
+			<h3>display name</h3>
+		</div>
+
+		<form th:action="@{/confirmingRegistration}" th:object="${user}" method="post">
+			<div class="widnows" id="first-window">
+				<input type="text" th:field="*{surName}" placeholder="姓..."><br>
+				<input type="text" th:field="*{surNameKana}" placeholder="セイ..."><br>
+				<input type="text" th:field="*{email}"><br>
+				<input type="text" th:field="*{password}"><br>
+				<input type="text" th:field="*{gender}"><br>
+				<input type="date" th:field="*{birthday}" value="" min="1920-01-01"
+					max="${#calendars.format(#calendars.createNowForTimeZone('GMT+0900'), 'yyyy年MM月dd日 HH時mm分ss秒')}"><br>
+				<input type="text" th:field="*{displayName}"><br>
+			</div>
+
+			<div class="widnows" id="second-window">
+				<input type="text" th:field="*{firstName}" placeholder="名..."><br>
+				<input type="text" th:field="*{firstNameKana}" placeholder="メイ..."><br>
+				<input type="text" th:field="*{emailConfirm}" placeholder="確認のためもう一度入力ください"><br>
+				<input type="text" th:field="*{passwordConfirm}" placeholder="確認のためもう一度入力ください"><br>
+			</div>
+
+			<input id="submit-button" type="submit" value="confirm">
+		</form>
+	</div>
+</body>
+
+</html>

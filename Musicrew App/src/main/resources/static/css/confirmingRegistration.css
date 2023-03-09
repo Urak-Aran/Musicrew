@@ -1,0 +1,36 @@
+@charset "UTF-8";
+body {
+	background-color: #37303a;
+}
+#registration-header {
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Roboto Mono', monospace;
+	color: #d5a6bd;
+	background-color: #111111;
+	padding: 1px;
+	margin: 10px 50px;
+	border-radius: 20px;
+}
+#registraion-confirm-area {
+	font-family: 'Roboto Mono', monospace;
+	margin: 15px 50px;
+	border-radius: 30px;
+	height: 400px;
+	background-color: #eeeeeeff;
+}
+.inline {
+	position: relative;
+	left: 118px; top: 15px;
+	margin-bottom: 10px;
+	display: flex;
+	height: 40px; width: 800px;
+}
+.first-window {
+	position: relative;
+	left: 50px; top: 20px;
+}
+.second-window {
+	position: relative;
+	left: 80px; top: 20px;
+}

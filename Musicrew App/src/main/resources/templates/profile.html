@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>profile</title>
+	<link rel="stylesheet" th:href="@{/css/header.css}">
+</head>
+
+<body>
+	<header>
+		<img th:src="@{images/MusicrewLogo.png}" id="header-logo">
+
+		<nav id="header-buttons">
+			<ul id="index">
+				<li><a th:href="@{/top}" method="post">top</a></li>
+				<li><a th:href="@{/search}" method="post">search</a></li>
+				<li><a th:href="@{/profile}" method="post">profile</a></li>
+				<li><a th:href="@{/messages}" method="post">messages</a></li>
+				<li><a th:href="@{/settings}" method="post">settings</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main></main>
+
+</body>
+
+</html>

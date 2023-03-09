@@ -1,0 +1,10 @@
+@charset "UTF-8";
+#search-bar {
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+	font-size: 30px;
+	width: 700px; height: 50px;
+	border-radius: 30px;
+}

@@ -1,0 +1,75 @@
+body {
+	background-color: #171319;
+}
+.login-page > img {
+	position: relative;
+	width: 80%; height: 580px;
+	padding: 0;
+	display: inline-block;
+}
+#login-page-rightside {
+	display: inline-block;
+	position: absolute;
+	right:5px;
+	width: 455px; height:580px;
+	background-color: #171319;
+	text-align: center;
+}
+#login-page-rightside > img {
+	width:400px;
+	position: relative;
+	top: 30px;
+}
+.label-username {
+	display: inline-block;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 20px;
+	color:#d5a6bd;
+	position: relative;
+	right: 140px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.label-password {
+	display: inline-block;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 20px;
+	color:#d5a6bd;
+	position: relative;
+	right: 140px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.forget-password {
+	font-size: 10px;
+	position: relative;
+	left: 120px;
+	color:#d5a6bd;
+}
+#form {
+	position: relative;
+	top: 50px;
+}
+.text-box {
+	width: 400px; height: 30px;
+	border-radius: 8px;
+}
+#login-button {
+	font-size: 18px;
+	position: relative;
+	margin-top: 20px;
+	width: 250px; height: 35px;
+	border-radius: 8px;
+	background-color: #ff325b;
+	color: white;
+	font-family: "confortaa";
+}
+#signup-button {
+	font-family: 'Roboto Mono', monospace;
+		background-color: #171319;
+		color:#d5a6bd;
+		font-weight: bold;
+		position: relative;
+		margin-top: 30px;	
+		border-width: 0;
+		}
