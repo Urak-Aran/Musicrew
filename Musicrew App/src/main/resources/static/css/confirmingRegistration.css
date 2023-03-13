@@ -34,3 +34,43 @@ body {
 	position: relative;
 	left: 80px; top: 20px;
 }
+#buttons {
+	position: relative;
+	left: 350px; top: 60px;
+	width: 680px;
+}
+#submit-button {
+	position: relative;
+	left: 80px;
+	font-size: 30px;
+	color: #c27ba0;
+	background-color: #eeeeeeff;
+	text-align: center;
+	border: none;
+	padding: 10px 50px;
+	border-radius: 10px;
+}
+#cancel-button {
+	font-size: 30px;
+	color: #ff325b;
+	background-color: #ead1dcff;
+	text-decoration: none;
+	padding: 12px 65px;
+	border-radius: 10px;
+}
+.bar {
+	background-color: #ff325b;
+	position: relative;
+	left: 33px; top: 15px;
+	line-height: 1px;
+	width: 1100px;
+}
+
+
+
+
+
+
+
+
+

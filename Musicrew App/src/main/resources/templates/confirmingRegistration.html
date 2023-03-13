@@ -18,40 +18,53 @@
 			<div class="first-window">[[${user.surName}]]</div>
 			<div class="second-window">[[${user.firstName}]]</div>
 		</div>
+		<div class="bar"><br></div>
 
 		<div class="inline">
 			<h3>kana</h3>
 			<div class="first-window">[[${user.surNameKana}]]</div>
 			<div class="second-window">[[${user.firstNameKana}]]</div>
 		</div>
+		<div class="bar"><br></div>
 
 		<div class="inline">
 			<h3>email</h3>
 			<div class="first-window">[[${user.email}]]</div>
 		</div>
+		<div class="bar"><br></div>
 
 		<div class="inline">
 			<h3>password</h3>
 			<div class="first-window">[[${user.password}]]</div>
 		</div>
+		<div class="bar"><br></div>
 
 		<div class="inline">
 			<h3>gender</h3>
 			<div class="first-window">[[${user.gender}]]</div>
 		</div>
+		<div class="bar"><br></div>
 
 		<div class="inline">
 			<h3>date of birth</h3>
 			<div class="first-window">[[${user.birthday}]]</div>
 		</div>
+		<div class="bar"><br></div>
 
 		<div class="inline">
 			<h3>display name</h3>
 			<div class="first-window">[[${user.displayName}]]</div>
 		</div>
-		<a th:href="@{/memberRegistration}" method="post">back</a>
-		<input id="submit-button" type="submit" value="confirm">
+		<div id="buttons">
+			<a id="cancel-button" th:href="@{/memberRegistration}" method="post">back</a>
+			<input id="submit-button" type="submit" value="confirm">
+		</div>
 	</div>
 </body>
 
 </html>
+
+
+
+
+

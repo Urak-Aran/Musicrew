@@ -30,8 +30,7 @@
 				<input type="text" th:field="*{email}"><br>
 				<input type="text" th:field="*{password}"><br>
 				<input type="text" th:field="*{gender}"><br>
-				<input type="date" th:field="*{birthday}" value="" min="1920-01-01"
-					max="${#calendars.format(#calendars.createNowForTimeZone('GMT+0900'), 'yyyy年MM月dd日 HH時mm分ss秒')}"><br>
+				<input type="date" th:field="*{birthday}" value="" min="1920-01-01" max=""><br>
 				<input type="text" th:field="*{displayName}"><br>
 			</div>
 
@@ -41,8 +40,11 @@
 				<input type="text" th:field="*{emailConfirm}" placeholder="確認のためもう一度入力ください"><br>
 				<input type="text" th:field="*{passwordConfirm}" placeholder="確認のためもう一度入力ください"><br>
 			</div>
-
-			<input id="submit-button" type="submit" value="confirm">
+			
+			<div id="buttons">
+				<a id="cancel-button" th:href="@{/login}" method="post">back</a>"
+				<input id="submit-button" type="submit" value="confirm">
+			</div>
 		</form>
 	</div>
 </body>

@@ -24,6 +24,9 @@ public class MusicrewController {
 
 	@PostMapping("/confirmingRegistration")
 	public String confirmingRegistration(@Validated @ModelAttribute User user, BindingResult result) {
+		if (!user.getEmail().equals(user.getEmailConfirm())) {
+			return "memberRegistration";
+		}
 		if (result.hasErrors()) {
 			return "memberRegistration";
 		}

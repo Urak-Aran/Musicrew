@@ -63,17 +63,30 @@ form {
 	background-color: #eeeeeeff;
 	margin-top: 25px;
 }
-#submit-button {
+#buttons {
+	display: flex;
 	position: absolute;
-	left: 550px;
-	top: 530px;
+	top: 530px; left: 400px;
+}
+#submit-button {
 	text-align: center;
 	font-size: 20px; font-weight: bold;
 	color: #d5a6bd;
 	background-color: #eeeeff;
 	border-width: 0px;
-	border-radius: 5px;
+	border-radius: 10px;
 	width: 200px; height: 50px;
+	margin-left: 40px;
+}
+#cancel-button {
+	text-align: center;
+	font-size: 20px; font-weight: bold;
+	width: 80px; height: 25px;
+	color: #ff325b;
+	background-color: #ead1dcff;
+	text-decoration: none;
+	padding: 12px 65px;
+	border-radius: 10px;
 }
 
 
