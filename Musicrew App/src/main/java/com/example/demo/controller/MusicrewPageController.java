@@ -10,10 +10,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.model.User;
 
 @Controller
-public class MusicrewController {
+public class MusicrewPageController {
 
 	@GetMapping("/")
 	public String login() {
+		return "login";
+	}
+	
+	@GetMapping("/login")
+	public String redirectLogin() {
 		return "login";
 	}
 
