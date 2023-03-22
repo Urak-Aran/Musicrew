@@ -39,20 +39,11 @@ public class User {
 	@Email
 	@Size(max = 254)
 	private String email;
-	
-	@NotBlank
-	@Email
-	@Size(max = 254)
-	private String emailConfirm;
 
 	@NotBlank
 	@Size(min = 6, max= 60)
 	private String password;
 	
-	@NotBlank
-	@Size(min = 6, max= 60)
-	private String passwordConfirm;
-
 	private String gender;
 
 	private String birthday;

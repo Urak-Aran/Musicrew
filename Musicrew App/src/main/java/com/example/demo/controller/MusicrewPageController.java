@@ -1,13 +1,7 @@
 package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-
-import com.example.demo.model.User;
 
 @Controller
 public class MusicrewPageController {
@@ -22,21 +16,21 @@ public class MusicrewPageController {
 		return "login";
 	}
 
-	@GetMapping("/memberRegistration")
-	public String memberRegistration(@ModelAttribute User user) {
-		return "memberRegistration";
-	}
-
-	@PostMapping("/confirmingRegistration")
-	public String confirmingRegistration(@Validated @ModelAttribute User user, BindingResult result) {
-		if (!user.getEmail().equals(user.getEmailConfirm())) {
-			return "memberRegistration";
-		}
-		if (result.hasErrors()) {
-			return "memberRegistration";
-		}
-		return "confirmingRegistration";
-	}
+//	@GetMapping("/memberRegistration")
+//	public String memberRegistration(@ModelAttribute User user) {
+//		return "memberRegistration";
+//	}
+//
+//	@PostMapping("/confirmingRegistration")
+//	public String confirmingRegistration(@Validated @ModelAttribute User user, BindingResult result) {
+//		if (!user.getEmail().equals(user.getEmailConfirm())) {
+//			return "memberRegistration";
+//		}
+//		if (result.hasErrors()) {
+//			return "memberRegistration";
+//		}
+//		return "confirmingRegistration";
+//	}
 
 	@GetMapping("/top")
 	public String top() {
