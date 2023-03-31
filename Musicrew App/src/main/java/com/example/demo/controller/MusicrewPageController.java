@@ -16,21 +16,21 @@ public class MusicrewPageController {
 		return "login";
 	}
 
-//	@GetMapping("/memberRegistration")
-//	public String memberRegistration(@ModelAttribute User user) {
-//		return "memberRegistration";
-//	}
-//
-//	@PostMapping("/confirmingRegistration")
-//	public String confirmingRegistration(@Validated @ModelAttribute User user, BindingResult result) {
-//		if (!user.getEmail().equals(user.getEmailConfirm())) {
-//			return "memberRegistration";
-//		}
-//		if (result.hasErrors()) {
-//			return "memberRegistration";
-//		}
-//		return "confirmingRegistration";
-//	}
+	/*@GetMapping("/memberRegistration")
+	public String memberRegistration(@ModelAttribute User user) {
+		return "memberRegistration";
+	}
+	
+	@PostMapping("/confirmingRegistration")
+	public String confirmingRegistration(@Validated @ModelAttribute User user, BindingResult result) {
+		if (!user.getEmail().equals(user.getEmailConfirm())) {
+			return "memberRegistration";
+		}
+		if (result.hasErrors()) {
+			return "memberRegistration";
+		}
+		return "confirmingRegistration";
+	}*/
 
 	@GetMapping("/top")
 	public String top() {

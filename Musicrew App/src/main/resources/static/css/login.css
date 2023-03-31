@@ -40,10 +40,16 @@ body {
 	margin-top: 30px;
 	margin-bottom: 10px;
 }
+.remember-me {
+	font-family: 'Roboto Mono', monospace;
+	color:#d5a6bd;
+	position: relative;
+	right: 70px;
+}
 .forget-password {
 	font-size: 10px;
 	position: relative;
-	left: 120px;
+	left: 80px;
 	color:#d5a6bd;
 }
 #form {

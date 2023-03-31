@@ -14,20 +14,22 @@
 		<div id="login-page-rightside">
 			<img th:src="@{images/MusicrewLogo.png}">
 			<div>
-				<form th:action="@{/top}" id="form">
+				<form id="form" th:action="@{/top}" method="post" >
 					<label class="label-username">username</label>
-					<input type="text" class="text-box">
+					<input class="text-box" type="text" name="username">
 
 					<label class="label-password">password</label>
-					<input type="text" class="text-box"><br>
+					<input class="text-box" type="password" name="password"><br>
 
-
+					<input class="remember-me" type="checkbox">
+					<label class="remember-me">remember me</label>
+					
 					<label class="forget-password">パスワードを忘れた方はこちら</label><br>
 
 					<input type="submit" value="login" id="login-button">
 					<br>
 				</form>
-				
+
 				<form th:action="@{/memberRegistration}" id="form">
 					<input type="submit" value="sign up" id="signup-button">
 				</form>
