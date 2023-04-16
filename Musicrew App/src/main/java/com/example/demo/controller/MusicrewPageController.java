@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MusicrewPageController {
 
-	@GetMapping("/")
+	/*@GetMapping("/")
 	public String login() {
 		return "login";
 	}
@@ -14,8 +14,8 @@ public class MusicrewPageController {
 	@GetMapping("/login")
 	public String redirectLogin() {
 		return "login";
-	}
-
+	}*/
+	
 	/*@GetMapping("/memberRegistration")
 	public String memberRegistration(@ModelAttribute User user) {
 		return "memberRegistration";
