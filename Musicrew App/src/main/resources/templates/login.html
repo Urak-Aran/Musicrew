@@ -14,12 +14,12 @@
 		<div id="login-page-rightside">
 			<img th:src="@{images/MusicrewLogo.png}">
 			<div>
-				<form id="form" th:action="@{/login}" method="post">
+				<form id="form" th:action="@{/login}" th:object="${login}" method="post">
 					<label class="label-username">username</label>
-					<input class="text-box" type="text" name="username">
+					<input class="text-box" type="text" th:field="*{username}" />
 
 					<label class="label-password">password</label>
-					<input class="text-box" type="password" name="password"><br>
+					<input class="text-box" type="password" th:field="*{password}"/><br>
 
 					<input class="remember-me" type="checkbox">
 					<label class="remember-me">remember me</label>
