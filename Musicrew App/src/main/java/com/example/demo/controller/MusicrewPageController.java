@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -43,6 +44,7 @@ public class MusicrewPageController {
 	}
 
 	@GetMapping("/profile")
+//	@PreAuthorize("hasRole('Admin')")
 	public String profile() {
 		return "profile";
 	}
