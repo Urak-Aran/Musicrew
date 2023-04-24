@@ -23,7 +23,7 @@
 			<h3>date of birth</h3>
 		</div>
 
-		<form th:action="@{/profile}" th:object="${user}" method="post">
+		<form th:action="@{/profile}" th:object="${userEntity}" method="post">
 			<div class="widnows" id="first-window">
 				<input type="text" th:field="*{surName}" placeholder="姓..."><br>
 				<input type="text" th:field="*{surNameKana}" placeholder="セイ..."><br>

@@ -5,13 +5,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.example.demo.model.UserEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
 
 @Service
@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
 		if (username != null) {
-			User userEntity = userRepository.findByUsername(username);
+			UserEntity userEntity = userRepository.findByUsername(username);
 
 			if (userEntity == null) {
 
@@ -40,9 +40,9 @@ public class UserServiceImpl implements UserService {
 		return null;
 	}
 
-	private List<GrantedAuthority> getUserAuthority(User user) {
+	private List<GrantedAuthority> getUserAuthority(UserEntity userEntity) {
 		Set<GrantedAuthority> roles = new HashSet<>();
-		roles.add(new SimpleGrantedAuthority(user.getRole().getRole()));
+		roles.add(new SimpleGrantedAuthority(userEntity.getRole().getRole()));
 		return new ArrayList<>(roles);
 	}
 
