@@ -35,17 +35,17 @@ public class WebSecurityConfig {
                         authorize
                                 .requestMatchers("/resources/**", "/static/**", "/css/**", "/images/**")
                                 .permitAll()
-                                .requestMatchers("/memberRegistration")
+                                .requestMatchers("/memberRegistration", "/memberRegistration/save")
                                 .permitAll()
                                 .anyRequest()
                                 .authenticated()
                                 .and()
                 ).formLogin(
                         form -> form
-                                .loginPage("/login")
-                                .loginProcessingUrl("/login")
+                                .loginPage("/login") // url in the security controller for login view
+                                .loginProcessingUrl("/login") // url in login html
                                 .defaultSuccessUrl("/profile")
-                                .successHandler(authenticationHandler)
+                                .successHandler(authenticationHandler) //for distinguishing users
                                 .permitAll()
                 ).logout(
                         logout -> logout

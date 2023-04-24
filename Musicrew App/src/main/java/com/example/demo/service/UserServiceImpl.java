@@ -5,22 +5,46 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.example.demo.model.UserEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.dto.UserDto;
+import com.example.demo.model.UserEntity;
+import com.example.demo.repository.RoleRepository;
 import com.example.demo.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {
 
 	private final UserRepository userRepository;
+	
+	private final RoleRepository roleRepository;
+	
+	private final PasswordEncoder passwordEncoder;
 
-	public UserServiceImpl(UserRepository userRepository) {
+	public UserServiceImpl(UserRepository userRepository,
+			RoleRepository roleRepository,
+			PasswordEncoder passwordEncoder) {
 		this.userRepository = userRepository;
+		this.passwordEncoder =passwordEncoder;
+		this.roleRepository =roleRepository;
+	}
+
+	@Override
+	public String saveUser(UserDto dto) {
+
+		UserEntity entity = dto.toEntity();
+		
+		entity.setPass(passwordEncoder.encode(entity.getPass()));
+		entity.setRole(roleRepository.findById(2L).get());
+		
+		userRepository.save(entity);
+		
+		return "memberRegistration";
 	}
 
 	@Override
