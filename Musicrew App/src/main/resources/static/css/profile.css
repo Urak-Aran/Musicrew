@@ -1,0 +1,25 @@
+@charset "UTF-8";
+#main-page {
+	background-color: #000000;
+	margin-top: 10px;
+	width: auto; height: 450px;
+	border-radius: 30px;
+	display: flex;
+}
+#left-side {
+	width: 40%;
+}
+.lightpink-row {
+	background-color: #ead1dcff;
+	border-radius: 10px;
+	margin-top: 25px;
+	margin-left: 20px;
+	padding: 10px 30px 10px 10px;
+}
+.darkpink-row {
+	background-color: #d5a6bdff;
+	border-radius: 10px;
+	margin-top: 25px;
+	margin-left: 20px;
+	padding: 10px 30px 10px 10px;
+}

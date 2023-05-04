@@ -2,7 +2,7 @@
 #main-page {
 	background-color: #716675;
 	height: 420px;
-	margin: 40px 10px;
+	margin: 30px 10px;
 	border-radius: 60px;
 	text-align: center;
 }
@@ -12,7 +12,7 @@
 	padding: 20px 10px;
 	border-radius: 15px;
 	position: relative;
-	top: 50px;
+	top: 20px;
 	color: #c27ba0;
 	font-weight: bold;
 }
@@ -26,5 +26,8 @@
 	margin: 15px 500px 0px 500px;
 }
 #fourth-a {
+	margin: 15px 500px 0px 500px;
+}
+#fifth-a {
 	margin: 15px 500px 0px 500px;
 }
