@@ -2,15 +2,20 @@ package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo.model.UserEntity;
 import com.example.demo.repository.UserRepository;
+import com.example.demo.service.UserService;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
 public class MusicrewPageController {
+	
+	private final UserService userService;
+	
+	
 
 	/*@GetMapping("/")
 	public String login() {
@@ -43,6 +48,11 @@ public class MusicrewPageController {
 		return "top";
 	}
 
+	public MusicrewPageController(UserService userService) {
+		super();
+		this.userService = userService;
+	}
+
 	@GetMapping("/search")
 	public String search() {
 		return "search";
@@ -54,10 +64,18 @@ public class MusicrewPageController {
 	
 	@GetMapping("/profile")
 //	@PreAuthorize("hasRole('Admin')")
-	public String profile(@PathVariable String username, Model model) {
-	UserEntity user = userRepository.findByUsername(username);
-	model.addAttribute("user", user);
-		return "profile";
+	public ModelAndView profile(HttpServletRequest request) {
+		
+		if(request.getSession().getAttribute("USER_ID")!= null) {
+			
+			String userName = (String)request.getSession().getAttribute("USER_ID");
+			
+			return userService.profile(userName);
+			
+		}
+	
+		return null;
+		
 	}
 
 	@GetMapping("/messages")

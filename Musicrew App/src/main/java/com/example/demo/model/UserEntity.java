@@ -1,5 +1,9 @@
 package com.example.demo.model;
 
+import org.springframework.beans.BeanUtils;
+
+import com.example.demo.dto.UserDto;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -58,6 +62,14 @@ public class UserEntity {
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "role", referencedColumnName = "id")
 	private RoleEntity role;
+	
+	public UserDto toDto() {
+		
+		UserDto dto = new UserDto();
+		BeanUtils.copyProperties(this, dto);
+		return dto;
+		
+	}
 }
 
 

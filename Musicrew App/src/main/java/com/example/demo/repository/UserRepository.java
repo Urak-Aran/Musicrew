@@ -9,6 +9,7 @@ import com.example.demo.model.UserEntity;
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
 
 	UserEntity findByUsername(String Username);
+	
 	Optional<UserEntity> findById(Long id);
 
 }

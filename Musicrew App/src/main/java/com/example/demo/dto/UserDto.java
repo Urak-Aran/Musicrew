@@ -33,6 +33,8 @@ public class UserDto {
 
 	private String birthday;
 	
+	private RoleDto role;
+	
 	public UserEntity toEntity() {
 		
 		UserEntity entity = new UserEntity();
